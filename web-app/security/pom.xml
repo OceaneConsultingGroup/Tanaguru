@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.opens</groupId>
     <artifactId>security</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+    <version>3.0.0</version>
     <name>security</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <log4jGroupId>log4j</log4jGroupId>
-        <log4jVersion>1.2.15</log4jVersion>
+        <log4jVersion>1.2.17</log4jVersion>
 
     </properties>
     <build>
