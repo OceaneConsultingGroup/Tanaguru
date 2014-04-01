@@ -14,6 +14,7 @@ import javax.ws.rs.core.Response;
 
 import org.opens.tanaguru.entity.audit.Audit;
 import org.opens.tanaguru.entity.parameterization.Parameter;
+import org.opens.tanaguru.entity.service.parameterization.ParameterDataService;
 import org.opens.tanaguru.service.AuditService;
 import org.opens.tanaguru.util.ParameterUtils;
 import org.opens.tanaguru.ws.AuditWeb;
@@ -37,8 +38,8 @@ public class AuditWebImpl implements AuditWeb {
 	@Autowired
     private AuditService auditService;
 	
-//	@Autowired
-//	ParameterDataService parameterDataService;
+	@Autowired
+	ParameterDataService parameterDataService;
 
 	
     public AuditWebImpl() {
@@ -49,15 +50,20 @@ public class AuditWebImpl implements AuditWeb {
 	@GET
 	@Path("/auditPage")
     public Response auditPage(@QueryParam("url")String pageURL, @QueryParam("level")String level) {
+		
+		//get parameters
+		ParameterUtils.initParametersMap(parameterDataService);
+		
+		
 		//Get default set of parameters
 		Set<Parameter> parameters =  ParameterUtils.getDefaultParametersForPA();
 		
 		//define level if necessary : supposing it's not mondatory
 		if(level != null && !level.isEmpty()){
-			parameters.add(ParameterUtils.createParameter(5l, "LEVEL", level));
+			parameters.add(ParameterUtils.createParameter(/*5l,*/ "LEVEL", level));
 		}
 		
-		//launch ws
+		//launch ws (unused result variable) 
     	Audit audit = auditService.auditPage(pageURL, parameters);
     	
     	//return response
