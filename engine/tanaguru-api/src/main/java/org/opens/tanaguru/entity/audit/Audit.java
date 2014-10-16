@@ -21,14 +21,13 @@
  */
 package org.opens.tanaguru.entity.audit;
 
+import java.util.Collection;
 import java.util.Date;
 
-import org.opens.tanaguru.sdk.entity.Entity;
-import java.util.Collection;
-import java.util.List;
 import org.opens.tanaguru.entity.parameterization.Parameter;
 import org.opens.tanaguru.entity.reference.Test;
 import org.opens.tanaguru.entity.subject.WebResource;
+import org.opens.tanaguru.sdk.entity.Entity;
 
 /**
  * 
@@ -36,194 +35,198 @@ import org.opens.tanaguru.entity.subject.WebResource;
  */
 public interface Audit extends Entity {
 
-    /**
-     *
-     * @param contentList
-     *            the content list to add
-     */
-    void addAllContent(Collection<Content> contentList);
+	/**
+	 * 
+	 * @param contentList
+	 *            the content list to add
+	 */
+	void addAllContent(Collection<Content> contentList);
 
-    /**
-     *
-     * @param grossResultList
-     *            the gross result list to add
-     */
-    void addAllGrossResult(Collection<ProcessResult> grossResultList);
+	/**
+	 * 
+	 * @param grossResultList
+	 *            the gross result list to add
+	 */
+	void addAllGrossResult(Collection<ProcessResult> grossResultList);
 
-    /**
-     *
-     * @param netResultList
-     *            the net result list to add
-     */
-    void addAllNetResult(Collection<ProcessResult> netResultList);
+	/**
+	 * 
+	 * @param netResultList
+	 *            the net result list to add
+	 */
+	void addAllNetResult(Collection<ProcessResult> netResultList);
 
-    /**
-     *
-     * @param testList
-     *            the test set to add
-     */
-    void addAllTest(Collection<Test> testList);
+	/**
+	 * 
+	 * @param testList
+	 *            the test set to add
+	 */
+	void addAllTest(Collection<Test> testList);
 
-    /**
-     *
-     * @param content
-     *            the content to add
-     */
-    void addContent(Content content);
+	/**
+	 * 
+	 * @param content
+	 *            the content to add
+	 */
+	void addContent(Content content);
 
-    /**
-     *
-     * @param grossResult
-     *            the gross result to add
-     */
-    void addGrossResult(ProcessResult grossResult);
+	/**
+	 * 
+	 * @param grossResult
+	 *            the gross result to add
+	 */
+	void addGrossResult(ProcessResult grossResult);
 
-    /**
-     *
-     * @param netResult
-     *            the net result to add
-     */
-    void addNetResult(ProcessResult netResult);
+	/**
+	 * 
+	 * @param netResult
+	 *            the net result to add
+	 */
+	void addNetResult(ProcessResult netResult);
 
-    /**
-     *
-     * @param subject
-     *            the subject to set
-     */
-    void setSubject(WebResource subject);
+	/**
+	 * 
+	 * @param subject
+	 *            the subject to set
+	 */
+	void setSubject(WebResource subject);
 
-    /**
-     *
-     * @param test
-     *            the test to add
-     */
-    void addTest(Test test);
+	/**
+	 * 
+	 * @param test
+	 *            the test to add
+	 */
+	void addTest(Test test);
 
-    /**
-     *
-     * @return the comment
-     */
-    String getComment();
+	/**
+	 * 
+	 * @return the comment
+	 */
+	String getComment();
 
-    /**
-     *
-     * @return the content list
-     */
-    Collection<Content> getContentList();
+	/**
+	 * 
+	 * @return the content list
+	 */
+	Collection<Content> getContentList();
 
-    /**
-     *
-     * @return the date of creation
-     */
-    Date getDateOfCreation();
-    
-    /**
-    *
-    * @return the date of creation
-    */
-    Date getManualAuditDateOfCreation();
+	/**
+	 * 
+	 * @return the date of creation
+	 */
+	Date getDateOfCreation();
 
-    /**
-     *
-     * @return the gross result list
-     */
-    Collection<ProcessResult> getGrossResultList();
+	/**
+	 * 
+	 * @return the date of creation
+	 */
+	Date getManualAuditDateOfCreation();
 
-    /**
-     *
-     * @return the net result list
-     */
-    Collection<ProcessResult> getNetResultList();
+	/**
+	 * 
+	 * @return the gross result list
+	 */
+	Collection<ProcessResult> getGrossResultList();
 
-    /**
-     *
-     * @return the status
-     */
-    AuditStatus getStatus();
+	/**
+	 * 
+	 * @return the net result list
+	 */
+	Collection<ProcessResult> getNetResultList();
 
-    /**
-     *
-     * @return the subject
-     */
-    WebResource getSubject();
+	/**
+	 * 
+	 * @return the status
+	 */
+	AuditStatus getStatus();
 
-    /**
-     *
-     * @return the test list
-     */
-    Collection<Test> getTestList();
+	/**
+	 * 
+	 * @return the subject
+	 */
+	WebResource getSubject();
 
-    /**
-     *
-     * @param comment
-     *            the comment to set
-     */
-    void setComment(String comment);
+	/**
+	 * 
+	 * @return the test list
+	 */
+	Collection<Test> getTestList();
 
-    /**
-     *
-     * @param contentList
-     *            the content list to set
-     */
-    void setContentList(Collection<Content> contentList);
+	/**
+	 * 
+	 * @param comment
+	 *            the comment to set
+	 */
+	void setComment(String comment);
 
-    /**
-     *
-     * @param manualAuditDateOfCreation
-     *            the date of manual audit launch to set
-     */
-    void setManualAuditDateOfCreation(Date manualAuditDateOfCreation);
-    
-    /**
-    *
-    * @param dateOfCreaction
-    *            the date of content loading to set
-    */
-    void setDateOfCreation(Date dateOfCreaction);
+	/**
+	 * 
+	 * @param contentList
+	 *            the content list to set
+	 */
+	void setContentList(Collection<Content> contentList);
 
-    /**
-     *
-     * @param grossResultList
-     *            the gross result list to set
-     */
-    void setGrossResultList(Collection<ProcessResult> grossResultList);
+	/**
+	 * 
+	 * @param manualAuditDateOfCreation
+	 *            the date of manual audit launch to set
+	 */
+	void setManualAuditDateOfCreation(Date manualAuditDateOfCreation);
 
-    /**
-     *
-     * @param netResultList
-     *            the net result list to set
-     */
-    void setNetResultList(Collection<ProcessResult> netResultList);
+	/**
+	 * 
+	 * @param dateOfCreaction
+	 *            the date of content loading to set
+	 */
+	void setDateOfCreation(Date dateOfCreaction);
 
-    /**
-     *
-     * @param status
-     *            the status to set
-     */
-    void setStatus(AuditStatus status);
+	/**
+	 * 
+	 * @param grossResultList
+	 *            the gross result list to set
+	 */
+	void setGrossResultList(Collection<ProcessResult> grossResultList);
 
-    /**
-     *
-     * @param testList
-     *            the test list to set
-     */
-    void setTestList(Collection<Test> testList);
+	/**
+	 * 
+	 * @param netResultList
+	 *            the net result list to set
+	 */
+	void setNetResultList(Collection<ProcessResult> netResultList);
 
-    /**
-     * 
-     * @param parameterSet
-     */
-    void setParameterSet(Collection<Parameter> parameterSet);
+	/**
+	 * 
+	 * @param status
+	 *            the status to set
+	 */
+	void setStatus(AuditStatus status);
 
-    /**
-     * 
-     * @return
-     */
-    Collection<Parameter> getParameterSet();
+	/**
+	 * 
+	 * @param testList
+	 *            the test list to set
+	 */
+	void setTestList(Collection<Test> testList);
 
-    /**
-     * 
-     * @param parameter
-     */
-    void addParameter(Parameter parameter);
+	/**
+	 * 
+	 * @param parameterSet
+	 */
+	void setParameterSet(Collection<Parameter> parameterSet);
+
+	/**
+	 * 
+	 * @return
+	 */
+	Collection<Parameter> getParameterSet();
+
+	/**
+	 * 
+	 * @param parameter
+	 */
+	void addParameter(Parameter parameter);
+
+	String getIdReconciliation();
+
+	void setIdReconciliation(String idReconciliation);
 }

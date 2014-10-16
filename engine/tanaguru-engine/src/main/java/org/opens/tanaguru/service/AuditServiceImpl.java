@@ -97,9 +97,13 @@ public class AuditServiceImpl implements AuditService, AuditServiceListener {
     }
 
     @Override
-    public Audit auditPage(String pageUrl, Set<Parameter> paramSet) {
-        Logger.getLogger(this.getClass()).debug("auditpage");
+    public Audit auditPage(String pageUrl, Set<Parameter> paramSet) {    	
+        Logger.getLogger(this.getClass()).debug("auditpage");             
         AuditCommand auditCommand = auditCommandFactory.create(pageUrl, paramSet, false);
+        String split[] = pageUrl.split(";");
+        if(split.length == 6){
+        	auditCommand.getAudit().setIdReconciliation(split[5]);
+        }
         auditServiceThreadQueue.addPageAudit(auditCommand);
         return auditCommand.getAudit();
     }
