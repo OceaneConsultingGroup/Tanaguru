@@ -1,8 +1,8 @@
+[![Build Status](https://travis-ci.org/Tanaguru/Tanaguru.svg?branch=master)](https://travis-ci.org/Tanaguru/Tanaguru) [![Coverage Status](https://coveralls.io/repos/Tanaguru/Tanaguru/badge.png?branch=master)](https://coveralls.io/r/Tanaguru/Tanaguru)
+
 # Tanaguru
 
-Tanaguru is an opensource (AGPL license) website assessment tool dedicated to
-
-* accessibility (a11y) audits
+Tanaguru is an opensource (AGPL license) website assessment tool. It is dedicated to accessibility (a11y) audits, and focuses on reliability and high level of automation.
 
 ## Features
 
@@ -17,7 +17,7 @@ Four kinds of audit:
  
 ## Vision
 
-1. Automate as much as we can and more :)
+1. Automate as much as we can and even more :)
 2. Be 200% reliable (don't give erroneous result)
 3. have technological fun
 
@@ -27,7 +27,7 @@ http://www.tanaguru.org/Download/tanaguru-latest.tar.gz
 
 ## Demo
 
-http://beta.tanaguru.com/
+https://my.tanaguru.com/
 
 ## Installation and documentation
 
