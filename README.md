@@ -1,8 +1,8 @@
+[![Build Status](https://travis-ci.org/Tanaguru/Tanaguru.svg?branch=master)](https://travis-ci.org/Tanaguru/Tanaguru) [![Coverage Status](https://coveralls.io/repos/Tanaguru/Tanaguru/badge.png?branch=master)](https://coveralls.io/r/Tanaguru/Tanaguru)
+
 # Tanaguru
 
-Tanaguru is an opensource (AGPL license) website assessment tool dedicated to
-
-* accessibility (a11y) audits
+Tanaguru is an opensource (AGPL license) website assessment tool. It is dedicated to accessibility (a11y) audits, and focuses on reliability and high level of automation.
 
 ## Features
 
@@ -17,7 +17,7 @@ Four kinds of audit:
  
 ## Vision
 
-1. Automate as much as we can and more :)
+1. Automate as much as we can and even more :)
 2. Be 200% reliable (don't give erroneous result)
 3. have technological fun
 
@@ -27,7 +27,7 @@ http://www.tanaguru.org/Download/tanaguru-latest.tar.gz
 
 ## Demo
 
-http://beta.tanaguru.com/
+https://my.tanaguru.com/
 
 ## Installation and documentation
 
@@ -67,20 +67,19 @@ Or you can send an email to
 
 ## Content of this (last) version
 
-Bugs :
+Bugs:
 
-- [#47](https://github.com/Tanaguru/Tanaguru/issues/47) : The language detection tests return bad results for uppercase submitted text
+- [#86](https://github.com/Tanaguru/Tanaguru/issues/86) : AW22 8.8.1 Case sensitivity of lang definition
 
-Features : 
+Features :
 
-- Rgaa 2.2 referential full supported
-- Postgresql management (creation and insertion scripts)
-- Crawl optimisations (deal with canonical, improve fetch counting, improve fetch of testable data)
-- [#50](https://github.com/Tanaguru/Tanaguru/issues/50) : Provide a way to set-up whether the cookies have to be considered while crawling
-- [#49](https://github.com/Tanaguru/Tanaguru/issues/49) : [SEO 6.4.1] For a given title value, sort URLs
-- [#46](https://github.com/Tanaguru/Tanaguru/issues/46) : Override default user agent used by apache library to test URL before launching effectively the audit
-- [#43](https://github.com/Tanaguru/Tanaguru/issues/43) : Disable the load of Css content for audit of SEO type
-- [#37](https://github.com/Tanaguru/Tanaguru/issues/37) : Mail server is not configurable
+- Upgrade Java from 1.6 to 1.7
+- Upgrade Hibernate from 3.6.0.Final to 4.3.5.Final
+- Add new "referential-creator-maven-plugin" and "referential-creator" projects 
+- Create "rule demo project"
+- Refactor rule packaging to be handled by one project 
+- Harmonisation of Referential names
+- Improve rules test management 
 
 ## Other opensource tools
 
